@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://i2.wp.com/firasfneish-statistics-r.netlify.app/post/2021-04-16-calculating-confidence-interval-in-r/index.en_files/figure-html/unnamed-chunk-2-1.png?w=450&amp;ssl=1
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>95 Confidence Interval</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "95 Confidence Interval",
+  "datePublished": "2022-01-14",
+  "image": [https://www.researchgate.net/profile/Jouni-Jaakkola/publication/224835662/figure/fig1/AS:341140319555584@1458345598493/a-The-mean-difference-WMD-and-the-95-confidence-interval-95-CI-for-the-effect-of.png,https://www.spss-tutorials.com/img/confidence-interval-mean.png,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Margin-of-error-95.svg/310px-Margin-of-error-95.svg.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=95 confidence interval",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Head tag Code -->	</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<script type='text/javascript' src='https://zaline.diraya.my.id/300-1.js'></script></center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>95 Confidence Interval</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/malay/harga-emas-1-gram-hari-ini.html">harga emas 1 gram hari ini</a>
+											<a class="badge badge-info" href="/malay/malaysia-register-to-vote.html">malaysia register to vote</a>
+											<a class="badge badge-success" href="/malay/dual-language-program-malaysia-pdf.html">dual language program malaysia pdf</a>
+											<a class="badge badge-success" href="/malay/kalender-puasa-2018.html">kalender puasa 2018</a>
+											<a class="badge badge-secondary" href="/malay/four-in-the-morning.html">four in the morning</a>
+											<a class="badge badge-warning" href="/malay/how-to-get-cimb-bonus-point.html">how to get cimb bonus point</a>
+											<a class="badge badge-success" href="/malay/maksud-lambang-jata-negara.html">maksud lambang jata negara</a>
+											<a class="badge badge-warning" href="/malay/tanda-tanda-jodoh-dari-allah-swt.html">tanda tanda jodoh dari allah swt</a>
+											<a class="badge badge-warning" href="/malay/artis-melayu-wanita.html">artis melayu wanita</a>
+											<a class="badge badge-light" href="/malay/sole-proprietorship-examples.html">sole proprietorship examples</a>
+											<a class="badge badge-warning" href="/malay/ppd-seberang-perai-tengah.html">ppd seberang perai tengah</a>
+											<a class="badge badge-light" href="/malay/far-east-foam-industries-sdn-bhd.html">far east foam industries sdn bhd</a>
+											<a class="badge badge-success" href="/malay/presint-17-putrajaya.html">presint 17 putrajaya</a>
+											<a class="badge badge-success" href="/malay/eco-world-puncak-alam.html">eco world puncak alam</a>
+											<a class="badge badge-primary" href="/malay/thhe-fabricators-sdn-bhd.html">thhe fabricators sdn bhd</a>
+						</div>
+<center>
+	<script type='text/javascript' src='https://zaline.diraya.my.id/320-1.js'></script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/firasfneish-statistics-r.netlify.app/post/2021-04-16-calculating-confidence-interval-in-r/index.en_files/figure-html/unnamed-chunk-2-1.png?w=450&amp;ssl=1" data-lightbox="roadtrip" data-title="Calculating Confidence Interval In R R Bloggers">
+						<img class="card-img" src="https://i2.wp.com/firasfneish-statistics-r.netlify.app/post/2021-04-16-calculating-confidence-interval-in-r/index.en_files/figure-html/unnamed-chunk-2-1.png?w=450&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJFPzQ29B5Afi7f1POkV462xR7-aUYF3wFuFhhMIDcnqKCbpQLYvhZyOITb1iSjFw8fz0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Calculating Confidence Interval In R R Bloggers
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/publication/275279574/figure/tbl4/AS:614341447540742@1523481823439/Odds-ratio-OR-95-confidence-interval-95-CI-and-significance-level-of-IFG-and-DM.png" data-lightbox="roadtrip" data-title="Odds Ratio Or 95 Confidence Interval 95 Ci And Significance Download Table">
+						<img class="card-img" src="https://www.researchgate.net/publication/275279574/figure/tbl4/AS:614341447540742@1523481823439/Odds-ratio-OR-95-confidence-interval-95-CI-and-significance-level-of-IFG-and-DM.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlCUvsx32oHbnjh80JrXN4HmoS3qRTz5yEqKSy2JHY2BFkdcsdGlscCYVd7bBqtszw8ks';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Odds Ratio Or 95 Confidence Interval 95 Ci And Significance Download Table
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.simplypsychology.org/confidence-interval.jpg" data-lightbox="roadtrip" data-title="What Are Confidence Intervals Simply Psychology">
+						<img class="card-img" src="https://www.simplypsychology.org/confidence-interval.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoyqyaYqRD257sSEhaTFin1iaRzQrAC4iPRyd-7tXg4zyWvv6AQt0kpVeU4wZVgpOl_ek';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				What Are Confidence Intervals Simply Psychology
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Confidence_Intervals/SysBP_example-T_table.jpg" data-lightbox="roadtrip" data-title="Confidence Intervals">
+						<img class="card-img" src="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Confidence_Intervals/SysBP_example-T_table.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTluxvju0UFujt-4mLClpEAOphL_tr8YFp1eoSw4hurdnNmcEtZrLrma8koM5Gywlcq-oE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Intervals
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1024/1*M_z-b4fzmYdkBKLRw-NFmw.png" data-lightbox="roadtrip" data-title="Confidence Interval Calculation And Characteristics">
+						<img class="card-img" src="https://miro.medium.com/max/1024/1*M_z-b4fzmYdkBKLRw-NFmw.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJTYxF1xUQ_5R5Mbmb_Lo005sI-ee4f3RJ3cAhlxPm1ETXK8xTh6t8mi7IWI1jk1vGhp4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Interval Calculation And Characteristics
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.simplypsychology.org/confidence-interval.jpg?ezimgfmt=rs:380x229/rscb26/ng:webp/ngcb26" data-lightbox="roadtrip" data-title="What Are Confidence Intervals Simply Psychology">
+						<img class="card-img" src="https://www.simplypsychology.org/confidence-interval.jpg?ezimgfmt=rs:380x229/rscb26/ng:webp/ngcb26" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRL8jR_e97AgzLOWD6JPtd9EojrhpCTWuvYc5Gn3B2BMhItpjpoD0y8zxmf_LQR-2KYC4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				What Are Confidence Intervals Simply Psychology
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	
+</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://uploads-cdn.omnicalculator.com/images/confidence_interval/confidence_interval_95.png" data-lightbox="roadtrip" data-title="Confidence Interval Calculator">
+						<img class="card-img" src="https://uploads-cdn.omnicalculator.com/images/confidence_interval/confidence_interval_95.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpIxjsEPbpC9RlfX4H8gECd5SkH6h2pmh8NjX1er3uU-UcccWmdXbHtFhd0GDNS2TyHnM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Interval Calculator
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/CAZmr0kx2WQ/maxresdefault.jpg" data-lightbox="roadtrip" data-title="95 Confidence Interval Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/CAZmr0kx2WQ/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpOdNZta2a3hOVudk7oocGVVHAQVH1WjOMdYL6VK_PSxgHgM8N8dB68ZFYaAFUgRGiJE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				95 Confidence Interval Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/publication/287213151/figure/fig4/AS:341834506227719@1458511105344/Cumulative-mean-difference-MD-and-95-confidence-interval-CI-for-complications-time.png" data-lightbox="roadtrip" data-title="Cumulative Mean Difference Md And 95 Confidence Interval Ci For Download Scientific Diagram">
+						<img class="card-img" src="https://www.researchgate.net/publication/287213151/figure/fig4/AS:341834506227719@1458511105344/Cumulative-mean-difference-MD-and-95-confidence-interval-CI-for-complications-time.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFHL3Ti-8ZMXyRNOUM6H-QAtWVxIgTuRFDe0H3ktNDhq10GTx5jViwvfbT6H4knGHpHlU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cumulative Mean Difference Md And 95 Confidence Interval Ci For Download Scientific Diagram
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://analystprep.com/cfa-level-1-exam/wp-content/uploads/2019/10/page-159.jpg" data-lightbox="roadtrip" data-title="Confidence Interval Example Question Cfa Level 1 Analystprep">
+						<img class="card-img" src="https://analystprep.com/cfa-level-1-exam/wp-content/uploads/2019/10/page-159.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbiPMxfQEmK08tRYopKbTqon3qQDBXDG1-oy2oYTSjLhf5kMrbKfRFa4KtzeWoULJwWag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Interval Example Question Cfa Level 1 Analystprep
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.mathsisfun.com/data/images/ci95.gif" data-lightbox="roadtrip" data-title="Confidence Intervals">
+						<img class="card-img" src="https://www.mathsisfun.com/data/images/ci95.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKwVkX16npVvDOAnGxn158fFSpMJ-uYoeMW7jqS0eMT5_M0eN_LBjC0w4PN9BrhcdWFWs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Intervals
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/gdCvrpPZyRQ/maxresdefault.jpg" data-lightbox="roadtrip" data-title="3 Standard Error Confidence Intervals Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/gdCvrpPZyRQ/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMH8Q-M1KOP6tn2YVh06t5ljtKvEz7cc5N4yKufwx-Kut4WysX3RY7jHA9NW0gFSlokSg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3 Standard Error Confidence Intervals Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.spss-tutorials.com/img/confidence-interval-mean.png" data-lightbox="roadtrip" data-title="Confidence Intervals In Statistics Simple Tutorial">
+						<img class="card-img" src="https://www.spss-tutorials.com/img/confidence-interval-mean.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUL8MBZFLc0W5zVWcHBNe6UDYGX5nS6WeyQzB5Ref18DBFGkCHnfR077RuCgBTxG0pq1w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Intervals In Statistics Simple Tutorial
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Margin-of-error-95.svg/310px-Margin-of-error-95.svg.png" data-lightbox="roadtrip" data-title="Margin Of Error Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Margin-of-error-95.svg/310px-Margin-of-error-95.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBtHkK4uZAEvIRKOuR1sAvFwi8zxd3zeaPC2cFhhQM80FGGuHMPbcorHJUXmDVUvCqWJY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Margin Of Error Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/b/b9/Confidence_interval.png" data-lightbox="roadtrip" data-title="File Confidence Interval Png Wikimedia Commons">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Confidence_interval.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBlyiqRq6HamhdS8Of1zSeIjNIicX18OL1Hs5iiE6mu3FxOeFXjLrDgROct1nCBBwrW70';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				File Confidence Interval Png Wikimedia Commons
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images.prismic.io/userzoom/5442e69f-66d7-47fb-a768-ccc90e7d2814_interval_stats.png?auto=compress,format&amp;w=1800" data-lightbox="roadtrip" data-title="What Are Confidence Intervals And Why Do We Need Them In Usability Studies Userzoom">
+						<img class="card-img" src="https://images.prismic.io/userzoom/5442e69f-66d7-47fb-a768-ccc90e7d2814_interval_stats.png?auto=compress,format&amp;w=1800" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH-TXEQF8vqRzL08L8sA1LSkZMsx5PivWRoDgGCL4Q4JIfxQ4pMFrHqLGHrnDE8PFoLds';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				What Are Confidence Intervals And Why Do We Need Them In Usability Studies Userzoom
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/William-Severud/publication/309310826/figure/tbl2/AS:670410366529557@1536849695712/Mean-95-confidence-interval-CI-and-range-of-age-physical-characteristics-and.png" data-lightbox="roadtrip" data-title="Mean 95 Confidence Interval Ci And Range Of Age Physical Download Table">
+						<img class="card-img" src="https://www.researchgate.net/profile/William-Severud/publication/309310826/figure/tbl2/AS:670410366529557@1536849695712/Mean-95-confidence-interval-CI-and-range-of-age-physical-characteristics-and.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMrUUa4okwvhcW50kL4VAn-9DABFB8EMSR6jDIs5-u70ZWyzIQayOhms3x6TssX80b-U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Mean 95 Confidence Interval Ci And Range Of Age Physical Download Table
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.graphpad.com/guides/prism/latest/statistics/images/hmfile_hash_f71959f8.gif" data-lightbox="roadtrip" data-title="Graphpad Prism 9 Statistics Guide Interpreting A Confidence Interval Of A Mean">
+						<img class="card-img" src="https://www.graphpad.com/guides/prism/latest/statistics/images/hmfile_hash_f71959f8.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYtniP0rEij7lnoRYapiG7FChBn2EDoUhHIC_NIZ3iFv5Bv3ey05tbNdrwdH0LNjKeAE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Graphpad Prism 9 Statistics Guide Interpreting A Confidence Interval Of A Mean
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qph.fs.quoracdn.net/main-qimg-fb825a5584d571ed78ef869a50793a83.webp" data-lightbox="roadtrip" data-title="Why Is A 99 Confidence Level Wider When Constructing Confidence Intervals Quora">
+						<img class="card-img" src="https://qph.fs.quoracdn.net/main-qimg-fb825a5584d571ed78ef869a50793a83.webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3LRqz2m6dqRpZbwwuBZT2sEXPlc9IUrQQciuTumh6fQuOgiKxfnyHangjPVHOGnti4Tw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Why Is A 99 Confidence Level Wider When Constructing Confidence Intervals Quora
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.biochemia-medica.com/assets/images/upload/Clanci/18/18-2/confidence_interval/182_Simundic_lessons_slika1.jpg?1534441897846" data-lightbox="roadtrip" data-title="Confidence Interval Biochemia Medica">
+						<img class="card-img" src="https://www.biochemia-medica.com/assets/images/upload/Clanci/18/18-2/confidence_interval/182_Simundic_lessons_slika1.jpg?1534441897846" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROfjivsaKN0TDy4Egc75nmucI2PXPCEbtojqIxXELRFwkykLUiKKZDN_zNNdYck8Ocz-U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Interval Biochemia Medica
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/que_YzwzqGo/maxresdefault.jpg" data-lightbox="roadtrip" data-title="95 Confidence Interval Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/que_YzwzqGo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8tG5Evi2vBIvVtVvO89UalCu__bzt5vqWVw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				95 Confidence Interval Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://useruploads.socratic.org/wmQsbnjS1qrIFcvhXK1e_2%20Output%20Image%20%28PNG%29.png" data-lightbox="roadtrip" data-title="How Do You Find The Margin Of Error With N 163 X 96 And A 95 Confidence Interval Socratic">
+						<img class="card-img" src="https://useruploads.socratic.org/wmQsbnjS1qrIFcvhXK1e_2%20Output%20Image%20%28PNG%29.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToI1x2oVHqFodVqWDFttFjf3g75NbRoJtVaA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How Do You Find The Margin Of Error With N 163 X 96 And A 95 Confidence Interval Socratic
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://stevegallik.org/images/confidlevels.png" data-lightbox="roadtrip" data-title="Statistics Cellbiologyolm">
+						<img class="card-img" src="http://stevegallik.org/images/confidlevels.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcRhvXDoBgdMSQpuFG0h1vDS3lwfVNUAqLfA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Statistics Cellbiologyolm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://programmathically.com/wp-content/uploads/2021/01/Standard_deviation_diagram-1024x512.png" data-lightbox="roadtrip" data-title="Confidence Intervals And Z Score">
+						<img class="card-img" src="https://programmathically.com/wp-content/uploads/2021/01/Standard_deviation_diagram-1024x512.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIKATBL4pRi9rBMt4kWuM-1spDlTVy_SOF_w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Intervals And Z Score
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=Confidence+interval&amp;tbm=isch" data-lightbox="roadtrip" data-title="1">
+						<img class="card-img" src="/search?q=Confidence+interval&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=Confidence+interval&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://lh4.googleusercontent.com/OVWtcnOpFqOpi6x6Qy8pwuPo7aGquSkGGI1lYgkY3lWv-dXhdl-WaVsg-JnhrX7DLq7UbxOPuiYqwSA-AwNNqzrfsxL03Rm7LkUjFYS6aR1A5-WVDbSwlYflHPC2BFiaNS0f1ntP" data-lightbox="roadtrip" data-title="The Distinction Between Confidence Intervals Prediction Intervals And Tolerance Intervals Faq 1506 Graphpad">
+						<img class="card-img" src="https://lh4.googleusercontent.com/OVWtcnOpFqOpi6x6Qy8pwuPo7aGquSkGGI1lYgkY3lWv-dXhdl-WaVsg-JnhrX7DLq7UbxOPuiYqwSA-AwNNqzrfsxL03Rm7LkUjFYS6aR1A5-WVDbSwlYflHPC2BFiaNS0f1ntP" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsCg-cVbDCAv-DwqVb_izySKMqat1DyYn5QA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				The Distinction Between Confidence Intervals Prediction Intervals And Tolerance Intervals Faq 1506 Graphpad
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Jouni-Jaakkola/publication/224835662/figure/fig1/AS:341140319555584@1458345598493/a-The-mean-difference-WMD-and-the-95-confidence-interval-95-CI-for-the-effect-of.png" data-lightbox="roadtrip" data-title="A The Mean Difference Wmd And The 95 Confidence Interval 95 Ci Download Scientific Diagram">
+						<img class="card-img" src="https://www.researchgate.net/profile/Jouni-Jaakkola/publication/224835662/figure/fig1/AS:341140319555584@1458345598493/a-The-mean-difference-WMD-and-the-95-confidence-interval-95-CI-for-the-effect-of.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwnndT5wY0toW5Dv760GmV6eBXhWxVaXiAWg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				A The Mean Difference Wmd And The 95 Confidence Interval 95 Ci Download Scientific Diagram
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/www.alphr.com/wp-content/uploads/2021/03/9-14.png?resize=526%2C600&amp;ssl=1" data-lightbox="roadtrip" data-title="How To Calculate Confidence Interval In Google Sheets">
+						<img class="card-img" src="https://i1.wp.com/www.alphr.com/wp-content/uploads/2021/03/9-14.png?resize=526%2C600&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSQ9iJ1CK9VuHtEgXb2tE4ZbrUGsASxMDxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How To Calculate Confidence Interval In Google Sheets
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.simplypsychology.org/NormalDist1.96.png?ezimgfmt=rs:380x256/rscb26/ng:webp/ngcb26" data-lightbox="roadtrip" data-title="What Are Confidence Intervals Simply Psychology">
+						<img class="card-img" src="https://www.simplypsychology.org/NormalDist1.96.png?ezimgfmt=rs:380x256/rscb26/ng:webp/ngcb26" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZK7wGAGxI-tJaJY-mBvpQoevyeVPMwNQjIw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				What Are Confidence Intervals Simply Psychology
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.spss-tutorials.com/img/t-distribution-single-mean.png" data-lightbox="roadtrip" data-title="Confidence Intervals In Statistics Simple Tutorial">
+						<img class="card-img" src="https://www.spss-tutorials.com/img/t-distribution-single-mean.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5k2TFHvtx74c_bg2g4gpFOy2bIOHpGiFy_A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Intervals In Statistics Simple Tutorial
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/www.theanalysisfactor.com/wp-content/uploads/2019/04/Measure-Width-of-Confidence-Interval.png?resize=616%2C202&amp;ssl=1" data-lightbox="roadtrip" data-title="How To Interpret The Width Of A Confidence Interval The Analysis Factor">
+						<img class="card-img" src="https://i1.wp.com/www.theanalysisfactor.com/wp-content/uploads/2019/04/Measure-Width-of-Confidence-Interval.png?resize=616%2C202&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMB0L4oWOtWndbuDC7ZwgyTrwUXh-WtqAKlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How To Interpret The Width Of A Confidence Interval The Analysis Factor
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.corporatefinanceinstitute.com/assets/confidence-function01.png" data-lightbox="roadtrip" data-title="Confidence Interval Excel Funtion Formula Examples How To Use">
+						<img class="card-img" src="https://cdn.corporatefinanceinstitute.com/assets/confidence-function01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXBiQ-JX33x5AbPDhdhafJ-ERxdjBZQOEj0g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Confidence Interval Excel Funtion Formula Examples How To Use
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://someka.net/wp-content/uploads/2020/10/how-to-calculate-confidence-interval-in-excel.png" data-lightbox="roadtrip" data-title="How To Calculate Confidence Interval In Excel Someka">
+						<img class="card-img" src="https://someka.net/wp-content/uploads/2020/10/how-to-calculate-confidence-interval-in-excel.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlxspdMnI8Qan1_pJaurVseDHdDf36xduOxQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How To Calculate Confidence Interval In Excel Someka
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		<div class="d-block mt-4 p-3">
+
+			Source : <a href="https://pinterest.com" rel="nofollow noopener">pinterest.com</a>
+		</div>
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+<!-- Statcounter code for 2_mamakamaa https://mamakamaa.blogspot.com/ on Blogger -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=12506186; 
+var sc_invisible=1; 
+var sc_security="04fde361"; 
+//]]>
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js" async></script>
+
+		
+		
+		
+			</body>
+</html>

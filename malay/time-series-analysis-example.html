@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://www.biosym.uzh.ch/modules/models/Modeling_Basics/Time_Series/simpleavg.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>Time Series Analysis Example</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "Time Series Analysis Example",
+  "datePublished": "2022-01-14",
+  "image": [https://www.mssqltips.com/tipimages2/6778_time-series-forecasting-with-r-examples.001.png,https://cdn.educba.com/academy/wp-content/uploads/2020/06/Time-Series-Analysis-Example-2.png,https://miro.medium.com/max/1400/1*po-ZfwDPLCS5cIQBG_S-lA.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=time series analysis example",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Head tag Code -->	</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<script type='text/javascript' src='https://zaline.diraya.my.id/300-1.js'></script></center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>Time Series Analysis Example</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/malay/konsert-kurnia-slam.html">konsert kurnia slam</a>
+											<a class="badge badge-dark" href="/malay/aeon-bukit-tinggi-food.html">aeon bukit tinggi food</a>
+											<a class="badge badge-danger" href="/malay/tugas-kerani-am-pejabat.html">tugas kerani am pejabat</a>
+											<a class="badge badge-dark" href="/malay/maybank-stock-login.html">maybank stock login</a>
+											<a class="badge badge-dark" href="/malay/kupi-kupi-fm-sabah.html">kupi kupi fm sabah</a>
+											<a class="badge badge-dark" href="/malay/kuala-lumpur-fashion-week.html">kuala lumpur fashion week</a>
+											<a class="badge badge-warning" href="/malay/restaurant-in-cheras.html">restaurant in cheras</a>
+											<a class="badge badge-secondary" href="/malay/haiwan-pupus-di-malaysia.html">haiwan pupus di malaysia</a>
+											<a class="badge badge-info" href="/malay/money-changer-kuching.html">money changer kuching</a>
+											<a class="badge badge-light" href="/malay/uber-malaysia-driver-earnings.html">uber malaysia driver earnings</a>
+											<a class="badge badge-primary" href="/malay/malaysian-labour-law-working-hours.html">malaysian labour law working hours</a>
+											<a class="badge badge-dark" href="/malay/e-filing-portal-income-tax-malaysia.html">e filing portal income tax malaysia</a>
+											<a class="badge badge-secondary" href="/malay/karangan-cara-cara-memupuk-semangat-patriotik-dalam-kalangan-murid.html">karangan cara cara memupuk semangat patriotik dalam kalangan murid</a>
+											<a class="badge badge-warning" href="/malay/kepentingan-haiwan-kepada-manusia.html">kepentingan haiwan kepada manusia</a>
+											<a class="badge badge-danger" href="/malay/semak-status-kiss-selangor.html">semak status kiss selangor</a>
+						</div>
+<center>
+	<script type='text/javascript' src='https://zaline.diraya.my.id/320-1.js'></script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1400/1*po-ZfwDPLCS5cIQBG_S-lA.png" data-lightbox="roadtrip" data-title="The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science">
+						<img class="card-img" src="https://miro.medium.com/max/1400/1*po-ZfwDPLCS5cIQBG_S-lA.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__omA7LPKlu_mZnbGsVf5d-h6wF0Z_kNoJBjRbqgKavlhZwcfrgatTXwEZySHHUAtTVgDQiZVhQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.aptech.com/wp-content/uploads/2019/09/ts-pp-yellowstone-1.jpg" data-lightbox="roadtrip" data-title="Introduction To The Fundamentals Of Time Series Data And Analysis Aptech">
+						<img class="card-img" src="https://www.aptech.com/wp-content/uploads/2019/09/ts-pp-yellowstone-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzJkjxlKmEHv3MTDV0_6C8cBnECranQndfD1tz8q8bmItSda3V23lsynwrPjVPuvLNr1Lg-KhR9V0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Introduction To The Fundamentals Of Time Series Data And Analysis Aptech
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.aptech.com/wp-content/uploads/2019/09/ts-pp-seasonality.jpg" data-lightbox="roadtrip" data-title="Introduction To The Fundamentals Of Time Series Data And Analysis Aptech">
+						<img class="card-img" src="https://www.aptech.com/wp-content/uploads/2019/09/ts-pp-seasonality.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcXIGHAMlKvDBsA7f7ZNXQdSNIEyFXRH1y2Ua_m4UHdIPyBPm9LjofCj_uTHF0ZVSR04HGo3NpSsI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Introduction To The Fundamentals Of Time Series Data And Analysis Aptech
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/HIWXdHlDSFs/maxresdefault.jpg" data-lightbox="roadtrip" data-title="Time Series Analysis The Best Example Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/HIWXdHlDSFs/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm0TqlvHqviXEzEIXcosXm3WU2n3TBGIwtOgl4n2pjC8fBAJTZjqqqcsV76uUrifCqZWOY0Vc02Kk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis The Best Example Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://magoosh.com/statistics/files/2018/05/time_series.png" data-lightbox="roadtrip" data-title="Time Series Analysis And Forecasting Definition And Examples Magoosh Statistics Blog">
+						<img class="card-img" src="https://magoosh.com/statistics/files/2018/05/time_series.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS17JYBJJRgOsZ5m83tkOx846k-ujYVYk6ICPGqtbjhYh3JecDCW3Ae74ucQmfn_oeyQyVIx8MkIEk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis And Forecasting Definition And Examples Magoosh Statistics Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.iunera.com/wp-content/uploads/2020/02/time-series-data-example-1024x576.png" data-lightbox="roadtrip" data-title="What Are Time Series Data Models And Analysis Iunera">
+						<img class="card-img" src="https://www.iunera.com/wp-content/uploads/2020/02/time-series-data-example-1024x576.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6H9mH30azOv3zs0ZiCEl6KTnY6SBXqBrBkIWUwUifEYcWDYY5myiOWtMLVdu0U0LgO8--rjmEyo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				What Are Time Series Data Models And Analysis Iunera
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	
+</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1400/1*4I4nZ-QxdEYfRIx5Iv4v_w.png" data-lightbox="roadtrip" data-title="The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science">
+						<img class="card-img" src="https://miro.medium.com/max/1400/1*4I4nZ-QxdEYfRIx5Iv4v_w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSARxV87ALmpHo0YRp6NgC80BNXx8tcoWnWo-CvseDPbfNvf6ziRMwxoRUv9hFtrUSDS_3C4L-4rN8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/publication/279249485/figure/fig6/AS:272639755288605@1442013791630/Two-example-time-series-displaying-exaggerated-positive-top-panel-and-negative-center.png" data-lightbox="roadtrip" data-title="Two Example Time Series Displaying Exaggerated Positive Top Panel And Download Scientific Diagram">
+						<img class="card-img" src="https://www.researchgate.net/publication/279249485/figure/fig6/AS:272639755288605@1442013791630/Two-example-time-series-displaying-exaggerated-positive-top-panel-and-negative-center.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJXoNoYEZbnEtmRHM5ZZd5KFVeCrFj9pozuDMbP4Vq5jAvBvzCFKl5RSAqRzT2el5UGuJcMuFpavQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Two Example Time Series Displaying Exaggerated Positive Top Panel And Download Scientific Diagram
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.solver.com/sites/default/files/Timese1.jpg" data-lightbox="roadtrip" data-title="Time Series Solver">
+						<img class="card-img" src="https://www.solver.com/sites/default/files/Timese1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmGokVB4vPiCH8T_a0WQznnHq7Ish61IOFWY0gVlTecDHUTz_2TXUYRbwP1fhBwtP-U6FtR4f9Pxo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Solver
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.aptech.com/wp-content/uploads/2019/09/ts-pp-wpi.jpg" data-lightbox="roadtrip" data-title="Introduction To The Fundamentals Of Time Series Data And Analysis Aptech">
+						<img class="card-img" src="https://www.aptech.com/wp-content/uploads/2019/09/ts-pp-wpi.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdMfQETBYK19vetn6A95gDcTFwx-W3Gy-4kCGXo3LcYDR6adZ4l_9ZLTPh65ewba0xhoNmdDK74Z0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Introduction To The Fundamentals Of Time Series Data And Analysis Aptech
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/statisticsbyjim.com/wp-content/uploads/2020/07/TimeSeriesTrade.png?fit=576%2C384&amp;ssl=1" data-lightbox="roadtrip" data-title="Time Series Analysis Introduction Statistics By Jim">
+						<img class="card-img" src="https://i1.wp.com/statisticsbyjim.com/wp-content/uploads/2020/07/TimeSeriesTrade.png?fit=576%2C384&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfxSsGxSEy6mA78yaKPfEhsEo8Pcs9mxJZczmJLZdc9Zwwhdaa_W_dtI1THk-lWvuw-vYZIYfywLE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis Introduction Statistics By Jim
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.dtreg.com/uploaded/pageimg/TimeSeriesChart_1.jpg" data-lightbox="roadtrip" data-title="Time Series Analysis And Forecasting Methodology Dtreg">
+						<img class="card-img" src="https://www.dtreg.com/uploaded/pageimg/TimeSeriesChart_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvqKvvaSBK3eWZ-RmgMrA3S25Tn9M8ptc5Lqc1RNdm2PX8JbMuMuNwu1sb4QpujDoLnD4ki_PrSaU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis And Forecasting Methodology Dtreg
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://exceltable.com/en/analyses-reports/images/analyses-reports22-1.png" data-lightbox="roadtrip" data-title="Time Series Analysis And Forecasting In Excel With Examples">
+						<img class="card-img" src="https://exceltable.com/en/analyses-reports/images/analyses-reports22-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1jHqMMzXURoga13OSP3u7aGP51Wwg6PmQJJCwGTeK6j4H1q0QhjV-XxkQD56JNDHhB6l9tNA99Tc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis And Forecasting In Excel With Examples
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://raw.githubusercontent.com/satishgunjal/images/master/Shampoo_Sales.png" data-lightbox="roadtrip" data-title="Time Series Analysis And Forecasting Quality Tech Tutorials">
+						<img class="card-img" src="https://raw.githubusercontent.com/satishgunjal/images/master/Shampoo_Sales.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC8buUn1ayYOrpX0NZRI-Sy5l6xAQP11DnJixDkhpGLnWm6SWdrgn9d48hDHy8zFRP5XwmY1Fe7UM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis And Forecasting Quality Tech Tutorials
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/_images/image5.png" data-lightbox="roadtrip" data-title="Using R For Time Series Analysis Time Series 0 2 Documentation">
+						<img class="card-img" src="https://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/_images/image5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0gwdvet6U4teLmrtXCvch0lVfGkF01VezoY1i2XDMRHABHf_UA2iMNFhC4COmxoO6jJbbk-18f20';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Using R For Time Series Analysis Time Series 0 2 Documentation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc451_r01.gif" data-lightbox="roadtrip" data-title="6 4 5 1 Example Of Multivariate Time Series Analysis">
+						<img class="card-img" src="https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc451_r01.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaxe1x1t-HTc97ZU-_3Tu-ZKmtsPbozB7bRthR71dhvNgd286Gul8xwDU1KFbB7E8NJCKUitzEovc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 4 5 1 Example Of Multivariate Time Series Analysis
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Nora-Mcintyre/publication/315839520/figure/fig1/AS:591023239614464@1517922329038/An-example-time-series-graph-to-illustrate-interrupted-time-series-analysis-with-the.png" data-lightbox="roadtrip" data-title="An Example Time Series Graph To Illustrate Interrupted Time Series Download Scientific Diagram">
+						<img class="card-img" src="https://www.researchgate.net/profile/Nora-Mcintyre/publication/315839520/figure/fig1/AS:591023239614464@1517922329038/An-example-time-series-graph-to-illustrate-interrupted-time-series-analysis-with-the.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgv-x1nFBDNB59fHL3-AWSq9arjsUnhWFZN_mOf1cZsZOZRBikuheInnJHkra0Amg5sb84FIQ5sr8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				An Example Time Series Graph To Illustrate Interrupted Time Series Download Scientific Diagram
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://learn.financestrategists.com/wp-content/uploads/2019/09/Time-Series-Analysis-Graph.jpg" data-lightbox="roadtrip" data-title="Time Series Analysis And Seasonal Variations Definition Formula Graph And Examples Finance Strategists">
+						<img class="card-img" src="https://learn.financestrategists.com/wp-content/uploads/2019/09/Time-Series-Analysis-Graph.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYrlX7NdmgJRuJFfKZIWlMAKkenJBuIUbsYLu0LpHcUljDwRNj2k5vCYBsDaffVyy3XSlm10cYiNQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis And Seasonal Variations Definition Formula Graph And Examples Finance Strategists
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://maxstat.de/images/Dokumentation/drex_time_series_analysis_custom.png" data-lightbox="roadtrip" data-title="Topic Time Series Analysis">
+						<img class="card-img" src="https://maxstat.de/images/Dokumentation/drex_time_series_analysis_custom.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5VR9BQx8Zzy2RTaCBZRxU0iS6AAWcXHF_UK5CB5mX1AVxZOv-z9hq_j_TBeWhft1aB-SU-8cOWw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Topic Time Series Analysis
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.solver.com/sites/default/files/TimeSeriesDataPartitionOutput.jpg" data-lightbox="roadtrip" data-title="Time Series Example Solver">
+						<img class="card-img" src="https://www.solver.com/sites/default/files/TimeSeriesDataPartitionOutput.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrwKqDF59J6wIe6FhJ6FSSzknYloix_nPJ1QTcN2htz25VngphwyhozGoH-2uVXzlY0PdTjbyJcHU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Example Solver
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1400/1*nJyUcWKFrkUTFo6NPnz7gA.png" data-lightbox="roadtrip" data-title="The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science">
+						<img class="card-img" src="https://miro.medium.com/max/1400/1*nJyUcWKFrkUTFo6NPnz7gA.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUa4Pe7AzLev28NQSbqG4aAnWtyjpWHQUCFA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.educba.com/academy/wp-content/uploads/2020/06/Time-Series-Analysis-Example-2.png" data-lightbox="roadtrip" data-title="Time Series Analysis Introduction To Time Series Analysis And Forecasting">
+						<img class="card-img" src="https://cdn.educba.com/academy/wp-content/uploads/2020/06/Time-Series-Analysis-Example-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6zdhJt94fYz3GHBWXDl-xCG5WNpucVYMi0A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis Introduction To Time Series Analysis And Forecasting
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.mssqltips.com/tipimages2/6778_time-series-forecasting-with-r-examples.001.png" data-lightbox="roadtrip" data-title="Time Series Forecasting Methods With R Examples">
+						<img class="card-img" src="https://www.mssqltips.com/tipimages2/6778_time-series-forecasting-with-r-examples.001.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxmM0skz-X8GlajtQxa_Sgv8NZXmn3rn6EbA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Forecasting Methods With R Examples
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://media.wiley.com/product_data/coverImage300/48/04705406/0470540648.jpg" data-lightbox="roadtrip" data-title="Time Series Analysis And Forecasting By Example Wiley">
+						<img class="card-img" src="https://media.wiley.com/product_data/coverImage300/48/04705406/0470540648.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzvKz44SrLQRU4Cz5pLSyKkjTbVPDrx0ZPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis And Forecasting By Example Wiley
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=time+series+data+table&amp;tbm=isch" data-lightbox="roadtrip" data-title="1">
+						<img class="card-img" src="/search?q=time+series+data+table&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=time+series+data+table&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.dummies.com/wp-content/uploads/473675.image0.jpg" data-lightbox="roadtrip" data-title="Patterns In Time Series Analysis Dummies">
+						<img class="card-img" src="https://www.dummies.com/wp-content/uploads/473675.image0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYAeAXBzFW-fYtIrsEOZb0wXBH0g5kBsJqyw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Patterns In Time Series Analysis Dummies
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/chap19time-seriesanalysisandforecasting-131111132424-phpapp01/95/chap19-time-seriesanalysisandforecasting-23-638.jpg?cb=1384176639" data-lightbox="roadtrip" data-title="T174om Vilzzdm">
+						<img class="card-img" src="https://image.slidesharecdn.com/chap19time-seriesanalysisandforecasting-131111132424-phpapp01/95/chap19-time-seriesanalysisandforecasting-23-638.jpg?cb=1384176639" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2VJRcCQ26-9LNwfH3JsjJv9PX9bVPulLLeQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				T174om Vilzzdm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1400/1*gTmbbay--JUKt6FaB-0K_w.png" data-lightbox="roadtrip" data-title="The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science">
+						<img class="card-img" src="https://miro.medium.com/max/1400/1*gTmbbay--JUKt6FaB-0K_w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNYY1LnAvAURAMVDjJSrjMUwRDl4bofX-9w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				The Complete Guide To Time Series Analysis And Forecasting By Marco Peixeiro Towards Data Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1578504462/image_4_rya9ck.png" data-lightbox="roadtrip" data-title="Tutorial Time Series Analysis With Spreadsheets Datacamp">
+						<img class="card-img" src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1578504462/image_4_rya9ck.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTig77yhhs5G2qF1BqUj_kOS8PxyDEv0OvJcA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Tutorial Time Series Analysis With Spreadsheets Datacamp
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.biosym.uzh.ch/modules/models/Modeling_Basics/Time_Series/simpleavg.png" data-lightbox="roadtrip" data-title="Time Series Analysis Basic Techniques">
+						<img class="card-img" src="http://www.biosym.uzh.ch/modules/models/Modeling_Basics/Time_Series/simpleavg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO2hEc3p-1Wju6XjVi9x-wpye35pU-02Xiyw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Time Series Analysis Basic Techniques
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.analyticsvidhya.com/wp-content/uploads/2018/09/var_4.png" data-lightbox="roadtrip" data-title="Multivariate Time Series Vector Auto Regression Var">
+						<img class="card-img" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2018/09/var_4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbyQ3I136EmjkIkQ5xW6eZacUDqvFpFJIb_w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multivariate Time Series Vector Auto Regression Var
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1152/1*rgINon3NRbGvu74M-JCYBw.jpeg" data-lightbox="roadtrip" data-title="How Not To Use Machine Learning For Time Series Forecasting The Sequel Kdnuggets">
+						<img class="card-img" src="https://miro.medium.com/max/1152/1*rgINon3NRbGvu74M-JCYBw.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKhIxKbTpWV2pSjEvcBcrsVbX96lOmUwFrUA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How Not To Use Machine Learning For Time Series Forecasting The Sequel Kdnuggets
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/chap16time-seriesanalysisandforecasting-191217015510/95/chap16-time-series-analysis-and-forecasting-35-638.jpg?cb=1576547797" data-lightbox="roadtrip" data-title="Chap16 Time Series Analysis And Forecasting">
+						<img class="card-img" src="https://image.slidesharecdn.com/chap16time-seriesanalysisandforecasting-191217015510/95/chap16-time-series-analysis-and-forecasting-35-638.jpg?cb=1576547797" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKC4Ym9eNobzg7tY4KoIK3aSS1g59mrs_29g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chap16 Time Series Analysis And Forecasting
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		<div class="d-block mt-4 p-3">
+
+			Source : <a href="https://pinterest.com" rel="nofollow noopener">pinterest.com</a>
+		</div>
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+<!-- Statcounter code for 2_mamakamaa https://mamakamaa.blogspot.com/ on Blogger -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=12506186; 
+var sc_invisible=1; 
+var sc_security="04fde361"; 
+//]]>
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js" async></script>
+
+		
+		
+		
+			</body>
+</html>
